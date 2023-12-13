@@ -50,7 +50,7 @@ class Cristal(Carte):
         self.__valeur = valeur
     def jouer(self,mage):
         mage.zone(self)
-    def gagneMana(self,mage):
+    def gagneMana(self,mage):           #appelé quand la carte est dans la zone de jeu
         mage.GagneMana(self.__valeur)
 
 class Creature(Carte):
@@ -60,7 +60,7 @@ class Creature(Carte):
         self.__attaque = attaque
     def jouer(self,mage):
         mage.zone(self)
-    def attaquer(self,cible):
+    def attaquer(self,cible):           #appelé quand la carte est dans la zone de jeu
         cible.perdPv(self.__attaque)
     def perdPv(self,nombre,mage):
         self.__pv -= nombre
